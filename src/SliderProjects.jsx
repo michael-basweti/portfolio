@@ -43,7 +43,11 @@ const SliderProjects = () => {
       <div className="slider-container container-fluid bg-dark p-3">
         <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
           <div className="">
-            <img className="img-fluid p-3" src={NATION_COURIER_HOME_PAGE} alt="" />
+            <img
+              className="img-fluid p-3"
+              src={NATION_COURIER_HOME_PAGE}
+              alt=""
+            />
           </div>
           <div className="">
             <img className="img-fluid p-3" src={NATION_COURIER_DASH} alt="" />

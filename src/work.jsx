@@ -61,11 +61,11 @@ const WorkPage = () => {
   ];
 
   const customStyles = {
-  overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.9)", // dark, almost fully opaque
-    zIndex: 1050, // Higher than other elements
-  },
-  content: {
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.9)", // dark, almost fully opaque
+      zIndex: 1050, // Higher than other elements
+    },
+    content: {
       position: "absolute",
       top: "50%",
       left: "50%",
@@ -75,19 +75,17 @@ const WorkPage = () => {
       transform: "translate(-50%, -50%) scale(1.5)",
       backgroundColor: "#fff",
     },
-};
-
+  };
 
   return (
     <div data-aos="zoom-in" className="container text-light py-5">
       <div className="container">
         <div className="text-center mb-3">
-          <h2 className="display-3 text-light mb-3">
-            🛠️ My Work
-          </h2>
+          <h2 className="display-3 text-light mb-3">🛠️ My Work</h2>
           <hr className="border border-3 opacity-75" />
           <p className="lead">
-            A glimpse into the systems I've built and the impact I've made across industries.
+            A glimpse into the systems I've built and the impact I've made
+            across industries.
           </p>
         </div>
 
@@ -100,10 +98,17 @@ const WorkPage = () => {
             {projects.map((project, index) => (
               <div className="col-md-6 mb-4" key={index}>
                 <div className="card bg-dark text-light h-100">
-                  <div className="card-header bg-dark text-white border-3" style={{ borderColor: "#ffffff" }}>
+                  <div
+                    className="card-header bg-dark text-white border-3"
+                    style={{ borderColor: "#ffffff" }}
+                  >
                     <h4 className="card-title color-theme">{project.title}</h4>
                   </div>
-                  <img src={project.image} className="card-img-top mt-3" alt={project.title} />
+                  <img
+                    src={project.image}
+                    className="card-img-top mt-3"
+                    alt={project.title}
+                  />
                   <div className="card-body">
                     <p className="card-text">{project.description}</p>
                     <button
@@ -128,8 +133,13 @@ const WorkPage = () => {
         >
           <div className="modal-content p-3 bg-dark text-light">
             <div className="modal-header">
-              <h5 className="modal-title mb-1">{selectedProject?.title} - Screenshots</h5>
-              <button className="btn-close btn-close-white" onClick={() => setSelectedProject(null)}></button>
+              <h5 className="modal-title mb-1">
+                {selectedProject?.title} - Screenshots
+              </h5>
+              <button
+                className="btn-close btn-close-white"
+                onClick={() => setSelectedProject(null)}
+              ></button>
             </div>
             <hr className="border mt-0 border-3 opacity-75" />
             <div className="modal-body">
@@ -137,44 +147,53 @@ const WorkPage = () => {
                 <div id="carouselScreenshots" className="carousel slide">
                   <div className="carousel-inner">
                     {selectedProject.images.map((img, idx) => (
-                      <div className={`carousel-item ${idx === 0 ? "active" : ""}`} key={idx}>
-                        <img src={img} className="img img-fluid rounded" alt={`Screenshot ${idx + 1}`} />
+                      <div
+                        className={`carousel-item ${idx === 0 ? "active" : ""}`}
+                        key={idx}
+                      >
+                        <img
+                          src={img}
+                          className="img img-fluid rounded"
+                          alt={`Screenshot ${idx + 1}`}
+                        />
                       </div>
                     ))}
                   </div>
                   {selectedProject.images.length > 1 && (
                     <>
-  <button
-    className="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselScreenshots"
-    data-bs-slide="prev"
-  >
-    <span className="custom-carousel-icon">
-      <ImPrevious2 size={30} />
-    </span>
-    <span className="visually-hidden">Previous</span>
-  </button>
+                      <button
+                        className="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselScreenshots"
+                        data-bs-slide="prev"
+                      >
+                        <span className="custom-carousel-icon">
+                          <ImPrevious2 size={30} />
+                        </span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
 
-  <button
-    className="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselScreenshots"
-    data-bs-slide="next"
-  >
-    <span className="custom-carousel-icon">
-      <ImNext2 size={30} />
-    </span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</>
-
+                      <button
+                        className="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselScreenshots"
+                        data-bs-slide="next"
+                      >
+                        <span className="custom-carousel-icon">
+                          <ImNext2 size={30} />
+                        </span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </>
                   )}
                 </div>
               )}
             </div>
             <div className="modal-footer mt-3">
-              <button className="btn btn-outline-light" onClick={() => setSelectedProject(null)}>
+              <button
+                className="btn btn-outline-light"
+                onClick={() => setSelectedProject(null)}
+              >
                 Close
               </button>
             </div>
