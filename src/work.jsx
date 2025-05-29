@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { FaBriefcase, FaImages } from "react-icons/fa";
+import { FaFileDownload, FaImages } from "react-icons/fa";
 import { ImPrevious2 } from "react-icons/im";
 import { ImNext2 } from "react-icons/im";
 import CASE1 from "./assets/case1.jpg";
@@ -86,7 +86,18 @@ const WorkPage = () => {
     <div data-aos="zoom-in" className="container text-light py-5">
       <div className="container">
         <div className="text-center mb-3">
-          <h2 className="display-3 text-light mb-3">🛠️ My Work</h2>
+          <h2 className="display-3 text-light mb-1">🛠️ My Work</h2>
+          <div className="d-flex justify-content-end">
+        <a
+          href="/BM_CV.pdf"
+          download
+          className="btn btn-outline-light d-inline-flex align-items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFileDownload className="me-2" /> Download My CV
+        </a>
+      </div>
           <hr className="border border-3 opacity-75" />
           <p className="lead">
             A glimpse into the systems I've built and the impact I've made
