@@ -9,17 +9,17 @@ const home = () => {
     <div data-aos="fade-down" className='container p-3'>
       <div className="p-3 mb-2 bg-dark text-white">
         <div className="container">
-          <p className='text-center'>Hi, I’m <b className='color-theme'>Michael Alex Basweti</b>. 👋</p>
+          <p className='text-center'>Hi, I’m <b className='color-theme'>Michael Alex Basweti</b>.</p>
         <p className='text-center'>Software engineer 💻, builder 🏗️, and explorer of ideas 🚀.</p>
-        <p className='text-center'>Let’s build something meaningful together. 🌿</p>
+        <p className='text-center'>Let’s build something meaningful together.</p>
         </div>
       </div>
     </div>
       
       <div data-aos="zoom-in" className="container p-3 mt-1">
-        <h1 className="color-theme text-center display-3">
-          Work Overview
-        </h1>
+        <h3 className="color-theme text-center display-3">
+          🗂️ Work Overview
+        </h3>
         <hr className='border border-6 opacity-75'/>
       </div>
       <div data-aos="zoom-in" className='container-fluid'>

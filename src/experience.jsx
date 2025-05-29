@@ -89,7 +89,7 @@ const Experience = () => {
 
   return (
     <div data-aos="zoom-in" className="container p-3">
-      <h2 className="text-center display-3 mb-4" >Work Experience</h2>
+      <h2 className="text-center display-3 mb-4" >💼 Work Experience</h2>
       <hr className='border border-3 opacity-75'/>
       {experiences.map((exp, index) => (
         <div className="card mb-4 bg-dark text-white" key={index} >

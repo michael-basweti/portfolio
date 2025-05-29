@@ -83,8 +83,7 @@ const WorkPage = () => {
       <div className="container">
         <div className="text-center mb-3">
           <h2 className="display-3 text-light mb-3">
-            <FaBriefcase className="me-2" />
-            My Work
+            🛠️ My Work
           </h2>
           <hr className="border border-3 opacity-75" />
           <p className="lead">
@@ -129,9 +128,10 @@ const WorkPage = () => {
         >
           <div className="modal-content p-3 bg-dark text-light">
             <div className="modal-header">
-              <h5 className="modal-title mb-3">{selectedProject?.title} - Screenshots</h5>
+              <h5 className="modal-title mb-1">{selectedProject?.title} - Screenshots</h5>
               <button className="btn-close btn-close-white" onClick={() => setSelectedProject(null)}></button>
             </div>
+            <hr className="border mt-0 border-3 opacity-75" />
             <div className="modal-body">
               {selectedProject && selectedProject.images.length > 0 && (
                 <div id="carouselScreenshots" className="carousel slide">
