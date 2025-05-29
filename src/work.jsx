@@ -62,8 +62,8 @@ const WorkPage = () => {
 
   const customStyles = {
     overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.9)", // dark, almost fully opaque
-      zIndex: 1050, // Higher than other elements
+      backgroundColor: "rgba(0, 0, 0, 0.9)",
+      zIndex: 1050,
     },
     content: {
       position: "absolute",
@@ -71,9 +71,14 @@ const WorkPage = () => {
       left: "50%",
       right: "auto",
       bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%) scale(1.5)",
-      backgroundColor: "#fff",
+      maxWidth: "90vw",
+      width: "100%",
+      maxHeight: "90vh",
+      overflow: "auto",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#000", // Optional: match your dark theme
+      border: "none",
+      padding: 0,
     },
   };
 
@@ -153,8 +158,9 @@ const WorkPage = () => {
                       >
                         <img
                           src={img}
-                          className="img img-fluid rounded"
+                          className="img-fluid rounded mx-auto d-block"
                           alt={`Screenshot ${idx + 1}`}
+                          style={{ maxHeight: "60vh", objectFit: "contain" }}
                         />
                       </div>
                     ))}

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import VIOLETBLUELOGO from "./assets/violetbluelogo.png";
 
 const Navbar = () => {
   const location = useLocation();
+  const navbarRef = useRef(null);
+
+  const handleLinkClick = () => {
+    const collapseElement = new window.bootstrap.Collapse(navbarRef.current, {
+      toggle: false,
+    });
+    collapseElement.hide();
+  };
+
   return (
     <div className="navbar-container sticky-top">
       <nav
@@ -29,79 +38,77 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarNavDropdown"
+            ref={navbarRef}
+          >
             <ul className="navbar-nav ms-auto align-items-center">
-              {/* GitHub Icon */}
               <li className="nav-item mx-2">
                 <a
                   href="https://github.com/michael-basweti"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-link"
+                  onClick={handleLinkClick}
                 >
                   <FaGithub size={20} />
                 </a>
               </li>
 
-              {/* LinkedIn Icon */}
               <li className="nav-item mx-2">
                 <a
                   href="https://linkedin.com/in/engineer-michael-basweti"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-link"
+                  onClick={handleLinkClick}
                 >
                   <FaLinkedin size={20} />
                 </a>
               </li>
 
-              {/* Regular Nav Links */}
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${
-                    location.pathname === "/" ? "active" : ""
-                  }`}
+                  className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
                   to="/"
+                  onClick={handleLinkClick}
                 >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${
-                    location.pathname === "/about" ? "active" : ""
-                  }`}
+                  className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
                   to="/about"
+                  onClick={handleLinkClick}
                 >
                   About
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${
-                    location.pathname === "/experience" ? "active" : ""
-                  }`}
+                  className={`nav-link ${location.pathname === "/experience" ? "active" : ""}`}
                   to="/experience"
+                  onClick={handleLinkClick}
                 >
                   Experience
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${
-                    location.pathname === "/work" ? "active" : ""
-                  }`}
+                  className={`nav-link ${location.pathname === "/work" ? "active" : ""}`}
                   to="/work"
+                  onClick={handleLinkClick}
                 >
                   Work
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${
-                    location.pathname === "/contact" ? "active" : ""
-                  }`}
+                  className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
                   to="/contact"
+                  onClick={handleLinkClick}
                 >
                   Contact
                 </Link>
