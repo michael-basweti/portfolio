@@ -1,0 +1,89 @@
+body {
+  background-color: #2B3035;
+  color: #ffffff;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.nav-link.active {
+  color: #6A56FF !important; /* Use !important to override Bootstrap */
+}
+
+.grey-component {
+  background-color: #726f6f;
+  color: #2B3035;
+}
+
+
+.component-color {
+  background-color: #2B3035;
+  color: #ffffff;
+}
+
+.color-theme {
+  color: #6A56FF;
+} 
+
+
+.btn-primary {
+  background-color: #6A56FF !important;
+  border-color: #6A56FF !important;
+}
+
+.btn-primary:hover {
+  background-color: #5940FF !important; /* Slightly darker for hover effect */
+  border-color: #5940FF !important;
+}
+
+
+
+/* src/components/Skills.css */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-card {
+  background-color: #6A56FF;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(106, 86, 255, 0.4);
+}
+
+.skill-card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+.custom-carousel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* or your theme color like #6A56FF */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: darken background */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: auto;
+  padding: 0.5rem;
+}
+
+.carousel-control-prev:hover .custom-carousel-icon,
+.carousel-control-next:hover .custom-carousel-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #6A56FF; /* Your theme color */
+}
