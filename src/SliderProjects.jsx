@@ -43,61 +43,61 @@ const SliderProjects = () => {
       <div className="slider-container container-fluid bg-dark p-3">
         <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
           <div className="">
-            <img width={900} src={NATION_COURIER_HOME_PAGE} alt="" />
+            <img className="img-fluid p-3" src={NATION_COURIER_HOME_PAGE} alt="" />
           </div>
           <div className="">
-            <img width={900} src={NATION_COURIER_DASH} alt="" />
+            <img className="img-fluid p-3" src={NATION_COURIER_DASH} alt="" />
           </div>
           <div className="">
-            <img width={900} src={NEAREST_AGENT} alt="" />
+            <img className="img-fluid p-3" src={NEAREST_AGENT} alt="" />
           </div>
           <div className="">
-            <img width={900} src={DMS1} alt="" />
+            <img className="img-fluid p-3" src={DMS1} alt="" />
           </div>
           <div className="">
-            <img width={900} src={DMS2} alt="" />
+            <img className="img-fluid p-3" src={DMS2} alt="" />
           </div>
           <div className="">
-            <img width={900} src={DMS3} alt="" />
+            <img className="img-fluid p-3" src={DMS3} alt="" />
           </div>
           <div className="">
-            <img width={900} src={DMS4} alt="" />
+            <img className="img-fluid p-3" src={DMS4} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CASE1} alt="" />
+            <img className="img-fluid p-3" src={CASE1} alt="" />
           </div>
           <div>
-            <img width={900} src={CASE2} alt="" />
+            <img className="img-fluid p-3" src={CASE2} alt="" />
           </div>
           <div>
-            <img width={900} src={CASE3} alt="" />
+            <img className="img-fluid p-3" src={CASE3} alt="" />
           </div>
           {/* <div>
-            <img width={900} src={CASE4} alt="" />
+            <img className="img-fluid p-3" src={CASE4} alt="" />
           </div> */}
           {/* <div>
-            <img width={900} src={CASE5} alt="" />
+            <img className="img-fluid p-3" src={CASE5} alt="" />
           </div> */}
           <div>
-            <img width={900} src={CLAIM1} alt="" />
+            <img className="img-fluid p-3" src={CLAIM1} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM2} alt="" />
+            <img className="img-fluid p-3" src={CLAIM2} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM3} alt="" />
+            <img className="img-fluid p-3" src={CLAIM3} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM4} alt="" />
+            <img className="img-fluid p-3" src={CLAIM4} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM5} alt="" />
+            <img className="img-fluid p-3" src={CLAIM5} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM6} alt="" />
+            <img className="img-fluid p-3" src={CLAIM6} alt="" />
           </div>
           <div className="">
-            <img width={900} src={CLAIM7} alt="" />
+            <img className="img-fluid p-3" src={CLAIM7} alt="" />
           </div>
         </Slider>
       </div>
