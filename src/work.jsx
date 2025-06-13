@@ -91,11 +91,21 @@ const WorkPage = () => {
         <a
           href="/BM_CV.pdf"
           download
-          className="btn btn-outline-light d-inline-flex align-items-center"
+          className="btn btn-outline-light mt-3 d-inline-flex align-items-center m-1"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFileDownload className="me-2" /> Download My CV
+        </a>
+
+        <a
+          href="/BM_CV_SHORTER_VERSION.pdf"
+          download
+          className="btn btn-outline-light mt-3 d-inline-flex align-items-center m-1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFileDownload className="me-2" /> Download My CV(SHORTER VERSION)
         </a>
       </div>
           <hr className="border border-3 opacity-75" />
